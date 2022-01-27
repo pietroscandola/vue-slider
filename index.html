@@ -24,22 +24,19 @@
                 </div>
                 <div class="col-6">
                     <div class="slider d-flex align-items-center">
-                        <img class="img-fluid" src="images/image1.jpg" alt="" />
-                        <div class="slider-dots">
-                            <div class="dot mx-2 active"></div>
-                            <div class="dot mx-2"></div>
-                            <div class="dot mx-2"></div>
-                            <div class="dot mx-2"></div>
+                        <img v-for="(media,index) in media" class="img-fluid" :src="media" alt="" v-if="isActive(index)" />
+                        <div class=" slider-dots ">
+                            <div v-for="(media,index) in media" class="dot mx-2 " :class="{active:isActive(index)}"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-3 d-flex align-items-center justify-content-center">
-                    <i class="fas fa-angle-right fa-4x"></i>
+                <div class="col-3 d-flex align-items-center justify-content-center ">
+                    <i class="fas fa-angle-right fa-4x "></i>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.js "></script>
 </body>
 
 </html>
