@@ -39,7 +39,7 @@ const root = new Vue({
         },
 
         prevPic() {
-            if (this.currentIndex !== 0) {
+            if (this.currentIndex === 0) {
                 this.currentIndex = this.media.length - 1;
             } else {
                 this.currentIndex--;
