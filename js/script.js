@@ -38,5 +38,23 @@ const root = new Vue({
             return index === this.currentIndex;
         },
 
+        prevPic() {
+            if (this.currentIndex !== 0) {
+                this.currentIndex = this.media.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+        },
+
+        nextPic() {
+            if (this.currentIndex === this.media.length - 1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
+        }
+
+
+
     }
 });
