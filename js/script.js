@@ -52,7 +52,12 @@ const root = new Vue({
             } else {
                 this.currentIndex++;
             }
+        },
+
+        setIndex(index) {
+            this.currentIndex = index;
         }
+
 
 
 
